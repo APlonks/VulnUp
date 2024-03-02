@@ -1,0 +1,106 @@
+body{
+    background: #f4e6d8;
+    padding: 0;
+    margin: 0;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+} 
+
+/*On initialise la taille et on centre la fenetre de connexion*/
+.page_connexion{
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.page_connexion > h1{
+    color : black;
+    width: 100%;
+    text-align: center;
+    font-size: 55px;
+    font-family:  New Century Schoolbook, TeX Gyre Schola, serif;
+    margin-bottom: 30px;
+}
+
+
+/*Placement du logo de l'université de Paris*/
+.logo{
+	position: absolute;
+	width: 70px; 
+}
+
+.logo:hover{
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+/*style du fomulaire dans sa "globalité"*/
+form {
+   
+    padding: 30px;
+    border: 1px solid grey;
+    background: #fff;
+    border-radius: 5px;
+}
+
+/*Placement du titre*/
+.header_connexion > h1{
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+/* Gestion de la taille des input pour les entrés utilisateurs */
+input[type=name], input[type=password] {
+    width: 100%;
+    padding: 12px 0 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /*Ne dépasse pas les bords de son conteneur*/
+    border: none;
+    border-bottom: 3px grey solid;
+    outline: 0;
+}
+
+input[type=name]:focus, input[type=password]:focus{
+    
+    border-color: darkred;
+}
+
+input[type=name]:valid, input[type=password]:valid{
+    border-color: green;
+}
+
+/* Style du bouton pour envoyer le formulaire quand on la souris ne passe pas dessus*/
+input[type=submit] {
+    background-color: #BCA086;
+    color: white;
+    padding: 14px 20px;
+    margin: 20px 0;
+    border: none;
+    cursor: pointer;
+    border-radius : 10px;
+    width: 100%;
+    outline: none;
+}
+
+/*Style du bouton pour envoyer le formulaire quand on passe la souris de dessus*/
+input[type=submit]:hover {
+    background-color: white;
+    color: #BCA086;
+    border: 1px solid #BCA086;
+}
+
+input[type=submit]:active {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
+}

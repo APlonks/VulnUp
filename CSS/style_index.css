@@ -1,0 +1,41 @@
+.container {
+    margin-top: 45px;
+    max-width: 600px ;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auto-word{
+    font-size: 25px;
+}
+
+.presentation-site{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.link-xss-hunter{
+    text-decoration: none;
+    color: #95806C;
+}
+
+.bouton-refresh{
+    padding: 15px;
+    color: #fff;
+    border:none;
+    border-radius: 3px;
+    font-size: 22px;
+    cursor:pointer;
+    outline:none;
+    text-decoration: none;
+    background-color: #BCA086;
+    margin-top: 20px;
+    font-family : inherit;
+}
+
+.bouton-refresh:hover{
+    background-color: #95806C;
+}

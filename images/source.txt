@@ -1,0 +1,5 @@
+https://www.iconfinder.com/icons/3935309/user_admin_icon : user_icon
+
+https://github.com/FortAwesome/Font-Awesome/issues/12176 : admin_icon
+
+https://u-paris.fr/charte-graphique-et-outils/ ; Université de Paris black white

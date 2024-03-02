@@ -1,0 +1,86 @@
+.messages {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.message {
+    display: flex;
+    background-color: #f4e6d8;
+    margin-top: 15px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgb(70, 69, 69);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.nouveau-message {
+    display: flex;
+    background-color: #f4e6d8;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0 1px 2px rgb(107, 107, 107);
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.auteur {
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+}
+
+.auteur > *{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.icon {
+    width: 30px;
+    height: auto;
+
+}
+
+.nom-compte {
+    border-top: 1px solid grey ;
+    margin-top: 5px;
+}
+
+.contenu{
+    width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #f4e6d8;
+}
+
+.textarea{
+    width: 100%;
+    background-color: #fff;
+    box-shadow: none;
+    border: 1px solid #cacaca;
+    border-radius: 2px ;
+}
+
+.bouton-message {
+    padding: 15px;
+    color: #fff;
+    border:none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor:pointer;
+    outline:none;
+    text-decoration: none;
+    background-color: #BCA086;
+    margin-left: 90%;
+    font-family: inherit;
+    font-size: 18px;
+}
+
+.bouton-message:hover{
+    background-color: #95806C;
+}
