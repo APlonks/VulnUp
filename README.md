@@ -1,6 +1,7 @@
 # VulnUp
 
-PHP Website to learn about Blind XSS
+PHP Website to learn about Blind XSS.
+Made on Ubuntu 22.04.
 
 ## Installation
 
@@ -22,8 +23,6 @@ docker run --name vulnup -p 8080:8080 -d vulnup:0.1
 ### Manual
 
 ``` bash
-
-Made on Ubuntu 22.04
 - Install prerequisites : sudo apt install php sqlite3 php-sqlite3 tzdata
 
 - Run the server on port 8080 : php -S localhost:8000
