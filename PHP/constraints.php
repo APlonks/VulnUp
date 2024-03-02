@@ -9,21 +9,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/style_bandeau.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/style_contraintes.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style_banner.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style_constraints.css">
     <title>Constraints</title>
 </head>
 <body>
     <?php
-        require("bandeau.php");
+        require("banner.php");
     ?>
 
     <div class="Description">
-        <h2>Voici les différentes contraintes applicables</h2>
+        <h2>Here are the various constraints that apply</h2>
     </div>
 
     <div class="container-switch">
-    <form action="./contraintes_back.php" method="post">
+    <form action="./constraints_back.php" method="post">
         
         <div class="button-explication">
             <label class="toggle">
@@ -36,7 +36,7 @@
                 <span class="circle"></span>
             </label>
             <div class="explication">
-                <p class="texte-explication">Blocking the script tag</p>
+                <p class="text-explication">Blocking the script tag</p>
             </div> 
         </div>
 
@@ -51,7 +51,7 @@
                 <span class="circle"></span>
             </label>
             <div class="explication">
-                <p class="texte-explication">Blocking most tags</p>
+                <p class="text-explication">Blocking most tags</p>
             </div>
         </div>
 
@@ -66,12 +66,12 @@
                 <span class="circle"></span>
             </label>
             <div class="explication">
-                <p class="texte-explication">Blocking most events</p>
+                <p class="text-explication">Blocking most events</p>
             </div>
         </div>
         
-        <div class="container-button-envoie">
-            <input class="button-envoie" type="submit" value="SAVE">
+        <div class="container-button-send">
+            <input class="button-send" type="submit" value="SAVE">
         </div>
 
     </div>   

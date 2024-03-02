@@ -1,22 +1,22 @@
 <?php
 
 	if($_SERVER["REQUEST_METHOD"] == "POST"){
-		$path = __DIR__ . '\..\INIT\database.sqlite';
+		$path = __DIR__ . '/../INIT/database.sqlite';
 		$bdd = new PDO("sqlite:$path");
 		var_dump($bdd);
 		$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 		var_dump($bdd);
 	}
 	if(isset($_POST['formlogin'])){
-		$nom = htmlspecialchars($_POST['name']);
+		$name = htmlspecialchars($_POST['name']);
 		$mp =$_POST['password'];
-		if(!empty ($nom) && !empty($mp)){
-			$q = $bdd->prepare("SELECT * FROM users WHERE nom = :nom");//
-			$q -> execute(['nom' => $nom]);
+		if(!empty ($name) && !empty($mp)){
+			$q = $bdd->prepare("SELECT * FROM users WHERE name = :name");
+			$q -> execute(['name' => $name]);
 			$result = $q -> fetch();			
 			if($result==true){
 				if ($mp == $result['mp']) {
-					$_SESSION['Nom'] = $result['nom'];
+					$_SESSION['name'] = $result['name'];
 					$_SESSION['Droit'] = $result['rights'];
 					$_SESSION['HashMP'] = $result['mp'];
 					$_SESSION['Anti-script'] = 0;

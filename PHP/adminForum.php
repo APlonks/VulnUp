@@ -9,15 +9,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/style_bandeau.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style_banner.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style_forum.css">
     <title>Forum Management</title>
 </head>
 <body>
     <?php
-        require("bandeau.php");
+        require("banner.php");
 
-        $path = __DIR__ . '\..\INIT\database.sqlite';
+        $path = __DIR__ . '/../INIT/database.sqlite';
         $pdo = new PDO("sqlite:$path");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -38,7 +38,7 @@
                         ?><img class="icon" src="../images/user_icon.png" alt="user icon"><?php
                     }
                     ?>
-                    <div class="nom-compte"><?= $message['title']?></div>
+                    <div class="account-name"><?= $message['title']?></div>
                 </div>
                 <div class="contenu">
                     <?= $message['body'] ?>

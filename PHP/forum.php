@@ -1,5 +1,4 @@
 <?php
-
     session_start();
 ?>
 
@@ -9,16 +8,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../CSS/style_bandeau.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style_banner.css">
     <link rel="stylesheet" type="text/css" href="../CSS/style_forum.css">
     <title>FORUM</title>
 </head>
 <body>
     <?php
-        if(isset($_SESSION['Nom'])){
+        if(isset($_SESSION['name'])){
             
             if($_SESSION['Anti-script'] == 1){
-                if(isset($_POST['envoie-message'])){
+                if(isset($_POST['send-message'])){
                     $_list = array("<script>","</script>");
                     $_POST['body'] = strtolower($_POST['body']);
                     $_POST['body'] = str_replace($_list,'',$_POST['body']);
@@ -26,10 +25,9 @@
             }
 
             if($_SESSION['Anti-tags'] == 1){
-                if(isset($_POST['envoie-message'])){
-                    $spam_words = file('../ANNEXES/list_tags.txt', FILE_IGNORE_NEW_LINES);
+                if(isset($_POST['send-message'])){
+                    $spam_words = file('../Appendices/list_tags.txt', FILE_IGNORE_NEW_LINES);
                     if (strpos($_POST['body'],"<body") ===false ){
-                        echo("Pas de Balise body");
                         foreach ($spam_words as $words ){
                             if ($words !== "body"){
                                 $words1 = "<".$words;
@@ -43,8 +41,8 @@
             }
 
             if($_SESSION['Anti-events'] == 1){
-                if(isset($_POST['envoie-message'])){
-                    $spam_words = file('../ANNEXES/list_events.txt', FILE_IGNORE_NEW_LINES);
+                if(isset($_POST['send-message'])){
+                    $spam_words = file('../Appendices/list_events.txt', FILE_IGNORE_NEW_LINES);
                     if (strpos($_POST['body'],"onresize") ===false ){  
                         foreach ($spam_words as $words ){
                             if ($words != "onresize"){
@@ -60,15 +58,15 @@
 
         }
 
-        require("bandeau.php");
+        require("banner.php");
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $path = __DIR__ . '\..\INIT\database.sqlite';
+            $path = __DIR__ . '/../INIT/database.sqlite';
             $pdo = new PDO("sqlite:$path");
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         
             $pdo->prepare('INSERT INTO messages (title, body) VALUES (?, ?)')
-                ->execute([$_SESSION['Nom'], $_POST['body']]);
+                ->execute([$_SESSION['name'], $_POST['body']]);
         }
         if(isset($_POST['submit'])){
             header('Location: '.$_SERVER['PHP_SELF']);
@@ -78,7 +76,7 @@
     ?>
 
     <?php
-        $path = __DIR__ . '\..\INIT\database.sqlite';
+        $path = __DIR__ . '/../INIT/database.sqlite';
         $pdo = new PDO("sqlite:$path");
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -99,7 +97,7 @@
                         ?><img class="icon" src="../images/user_icon.png" alt="user icon"><?php
                     }
                     ?>
-                    <div class="nom-compte"><?= $message['title']?></div>
+                    <div class="account-name"><?= $message['title']?></div>
                 </div>
                 <div class="contenu">
                     <?= $message['body'] ?>
@@ -107,17 +105,17 @@
             </div>
         <?php endforeach ?>
     
-        <?php  if(isset($_SESSION['Nom'])) { ?>
+        <?php  if(isset($_SESSION['name'])) { ?>
             <div class="nouveau-message">
                 <div class="auteur">
                     <?php
-                    if ($_SESSION['Nom'] === "admin"){
+                    if ($_SESSION['name'] === "admin"){
                         ?><img class="icon" src="../images/admin_icon.png" alt="admin icon"><?php
                     }else {
                         ?><img class="icon" src="../images/user_icon.png" alt="user icon"><?php
                     }
                     ?>
-                    <div class="nom-compte"><?= $_SESSION['Nom']?></div>
+                    <div class="account-name"><?= $_SESSION['name']?></div>
                 </div>
                 <div class="contenu">
                     <form method="post">
@@ -125,7 +123,7 @@
                             <textarea class=textarea name="body"></textarea>
                         </p>
                         <p>
-                            <button name="envoie-message" class="bouton-message" type="submit">Submit</button>
+                            <button name="send-message" class="bouton-message" type="submit">Submit</button>
                         </p>
                     </form>
                 </div>

@@ -1,6 +1,6 @@
 
 <?php
-$path = __DIR__ . './database.sqlite';
+$path = __DIR__ . '/database.sqlite';
 
 if (file_exists($path)) unlink($path);
 

@@ -4,7 +4,7 @@ body{
   min-width: 920px;
 }
 
-.bandeau{
+.banner{
   background-color: #f4e6d8;
   /* background-color: #f9f9f9; */
   /* border : 1px solid black; */
@@ -15,7 +15,7 @@ body{
 }
 
 
-.text-titre{
+.text-title{
   text-align: center;
   font-family: Georgia, sans-serif;
   font-size: 50px;
@@ -34,21 +34,21 @@ nav {
   margin-bottom: 10px;
 }
 
-nav .onglets{
+nav .tabs{
   display:flex;
   flex-wrap:wrap;
   margin-top: 5px;
   align-items: center;
 }
 
-nav .Connexion-Deconnexion{
+nav .connection-disconnection{
   display:flex;
   flex-wrap:wrap;
   align-items: center;
 }
 
 
-nav .onglets a {
+nav .tabs a {
   margin-right: 50px;
   cursor:pointer;
   text-decoration: none;
@@ -59,7 +59,7 @@ nav .onglets a {
   border-bottom: 1px solid #f4e6d8;
 }
 
-nav .onglets a:hover {
+nav .tabs a:hover {
   border-bottom: 1px solid black;
 }
 

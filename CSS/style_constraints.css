@@ -79,7 +79,7 @@ input:checked + .circle:before {
     margin-left: 40px;
 }
 
-.texte-explication{
+.text-explication{
     margin-right: 0px;
 }
 
@@ -87,13 +87,13 @@ p{
     margin-right: 0px;
 }
 
-.container-button-envoie{
+.container-button-send{
     margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
-.button-envoie {
+.button-send {
     padding: 15px;
     padding-left: 30px;
     padding-right: 30px;
@@ -107,6 +107,6 @@ p{
     border-radius: 2px;
 }
 
-.button-envoie:hover{
+.button-send:hover{
     background-color: #95806C;
 }

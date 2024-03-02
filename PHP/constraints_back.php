@@ -26,6 +26,6 @@ if(isset($_POST['Anti-events'])){
     $_SESSION["Anti-events"] = 0;
 }
 
-header('Location: ./contraintes.php');
+header('Location: ./constraints.php');
 
 ?>

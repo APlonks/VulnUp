@@ -11,15 +11,15 @@ section{
     height: 80vh;
 } 
 
-/*On initialise la taille et on centre la fenetre de connexion*/
-.page_connexion{
+/*On initialise la taille et on centre la fenetre de connection*/
+.page_connection{
     width: 400px;
     height: auto;
     display: flex;
     flex-direction: column;
 }
 
-.page_connexion > h1{
+.page_connection > h1{
     color : black;
     width: 100%;
     text-align: center;
@@ -48,8 +48,8 @@ form {
     border-radius: 5px;
 }
 
-/*Placement du titre*/
-.header_connexion > h1{
+/*Placement du title*/
+.header_connection > h1{
     text-align: center;
     margin: 0 auto;
     padding-top: 10px;

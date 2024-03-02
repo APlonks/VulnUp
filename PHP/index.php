@@ -9,13 +9,13 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" type="text/css" href="../CSS/style_bandeau.css">
+	<link rel="stylesheet" type="text/css" href="../CSS/style_banner.css">
 	<link rel="stylesheet" type="text/css" href="../CSS/style_index.css">
 	<title>Home</title>
     </head>
    <body>
 	   <?php
-			require("bandeau.php");
+			require("banner.php");
 	   ?>
 	   <div class="container">
 		   <div>
@@ -49,8 +49,8 @@
 </html>
 
 <?php 
-	if(isset($_POST['refresh'])){	//Si l'utilisateur à cliquer sur refresh on refresh la BDD
-		shell_exec('php ../INIT/refresh.php');	//On rafraichît la BDD
-		header('Location: index.php');	//On actualise la page
-	} 
+	if(isset($_POST['refresh'])){    // If the user clicked on refresh, we refresh the DB
+		shell_exec('php ../INIT/refresh.php');    // Refresh the DB
+		header('Location: index.php');    // Refresh the page
+	}
 ?>

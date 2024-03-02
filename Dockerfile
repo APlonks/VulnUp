@@ -4,12 +4,16 @@ WORKDIR /opt/
 
 COPY . /opt/
 
-RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y php sqlite3 tzdata
+# Install PHP, SQLite3, and PHP for SQLite
+RUN apt update && DEBIAN_FRONTEND=noninteractive apt install -y php sqlite3 php-sqlite3 tzdata
+
+RUN chmod 777 INIT
+
+# Execute refresh.php to initialize the database
+RUN php INIT/refresh.php
 
 EXPOSE 8080
 
-# ENTRYPOINT [ "sleep", "infinity" ]
-
 ENTRYPOINT [ "php", "-S", "0.0.0.0:8080" ]
 
-# CMD [ "php", "/opt/INIT/refresh.php" ]
+
