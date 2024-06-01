@@ -29,3 +29,6 @@ docker run --name vulnup -p 8080:8080 -d vulnup:0.1
 
 - Generate account in CLI : php INIT/refresh.php
 ```
+
+## The Application
+![main page](/images-readme/main-page.PNG)
